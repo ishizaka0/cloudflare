@@ -1,95 +1,99 @@
-# cloudflare
-CloudFlareの公式WordPressプラグイン
+以下に日本語訳を記載します：
 
-| No. | 更新対象 | name | status | update | version | 最新Ver | WP Tested | PHP ver | Plugin HomePage | WP公式URL | 備考 |
-| --- | -------- | ---- | ------ | ------ | ------- | ------- | --------- | -------- | -------------- | ---------- | ---- |
-| 4 |  ー  | cloudflare | active | none | 4.12.8 | 4.12.8 | 6.2.6 | 7.2 | [Cloudflare](https://blog.cloudflare.com/new-wordpress-plugin/) | [LINK](https://wordpress.org/plugins/cloudflare/) | ー |
+---
 
-# Cloudflare’s Plugin for WordPress
+# Cloudflare  
+Cloudflare公式のWordPressプラグイン  
 
-![build status](https://github.com/cloudflare/Cloudflare-WordPress/workflows/PHP%20Composer/badge.svg)
+| No. | 更新対象 | 名前 | ステータス | 更新 | バージョン | 最新バージョン | WordPressテスト済み | PHPバージョン | プラグインホームページ | WordPress公式URL | 備考 |  
+| --- | -------- | ---- | ---------- | ---- | ---------- | -------------- | ------------------- | ------------- | --------------------- | --------------- | ---- |  
+| 4   | ー        | Cloudflare | アクティブ | なし | 4.12.8    | 4.12.8         | 6.2.6              | 7.2          | [Cloudflare](https://blog.cloudflare.com/new-wordpress-plugin/) | [リンク](https://wordpress.org/plugins/cloudflare/) | ー |  
 
-Cloudflare’s WordPress plugin brings all of the benefits of Cloudflare into your WordPress dashboard for configuration, including a one-click application of default settings specifically optimized for WordPress.
+# CloudflareのWordPressプラグイン  
 
-By enabling Cloudflare on your WordPress website, you’ll find performance and security gains such as doubling your page load speeds, DDoS protection, web application firewall with WordPress-specific rulesets, free SSL, and SEO improvements.
+![ビルドステータス](https://github.com/cloudflare/Cloudflare-WordPress/workflows/PHP%20Composer/badge.svg)  
 
-## Table of Contents
+CloudflareのWordPressプラグインは、CloudflareのすべてのメリットをWordPressダッシュボードに取り込み、WordPress専用に最適化されたデフォルト設定をワンクリックで適用することができます。  
 
-[Description](#description)  
-[Installation](#installation)  
-[Support](#support)  
-[Features](#features)  
+このプラグインをWordPressサイトで有効化すると、ページ読み込み速度が2倍になるパフォーマンス向上、DDoS保護、WordPress専用ルールセットを備えたウェブアプリケーションファイアウォール（WAF）、無料SSL、SEO向上といった利点が得られます。  
+
+## 目次  
+
+[概要](#description)  
+[インストール](#installation)  
+[サポート](#support)  
+[機能](#features)  
 [FAQ](#faq)  
-[Contributions](#contributions)  
-[Changelog](#changelog)  
+[コントリビューション](#contributions)  
+[変更履歴](#changelog)  
 
-## Description
+## 概要  
 
-The WordPress plugin for Cloudflare offers all of the benefits of Cloudflare, with a one-click installation of settings specifically developed for the WordPress platform. Cloudflare’s free plugin for WordPress accelerates page load speeds, improves SEO, and protects against DDoS attacks and WordPress-specific vulnerabilities.
+CloudflareのWordPressプラグインは、WordPress専用に開発された設定をワンクリックで適用できる機能を提供します。Cloudflareの無料プラグインを利用することで、ページ読み込み速度を向上させ、SEOを改善し、DDoS攻撃やWordPress特有の脆弱性からウェブサイトを保護します。  
 
-## Features
+## 機能  
 
-### One-click WordPress-optimized settings
+### ワンクリックでWordPress向け最適化設定を適用  
 
-One-click application of WordPress-optimized settings is the easiest way to setup Cloudflare’s performance and security on your WordPress site. You can review the recommended settings that are applied, here: <https://support.cloudflare.com/hc/en-us/articles/227342487>
+WordPressに最適化された設定をワンクリックで適用することで、Cloudflareのパフォーマンスとセキュリティを簡単にセットアップできます。適用される推奨設定については、[こちら](https://support.cloudflare.com/hc/en-us/articles/227342487)をご覧ください。  
 
-### Web application firewall (WAF) rulesets
+### ウェブアプリケーションファイアウォール（WAF）ルールセット  
 
-Cloudflare’s web application firewall (WAF), available on all of Cloudflare’s paid plans, has built-in rulesets specifically built to mitigate against WordPress threats and vulnerabilities. Cloudflare’s WAF provides confidence that your website is always protected, even against the latest threats and vulnerabilities targeting WordPress websites.
+CloudflareのWAFは、すべての有料プランで利用可能で、WordPressの脅威や脆弱性を軽減するために専用ルールセットを備えています。CloudflareのWAFにより、常に最新の脅威からもウェブサイトを保護できます。  
 
-### Automatic cache purge on website updates
+### サイト更新時のキャッシュ自動パージ  
 
-Cloudflare’s plugin for WordPress automatically refreshes the Cloudflare cache upon making changes to your website appearance. This means that you can focus on your website, while we take care of ensuring that the freshest content is always available to your visitors.
+WordPressの外観を変更する際、CloudflareのプラグインはCloudflareキャッシュを自動で更新します。この機能により、最新のコンテンツを常に訪問者に表示できます。  
 
-### Automatic individual URL cache purge on page/post/custom post type edits
+### ページ/投稿/カスタム投稿タイプ編集時の個別URLキャッシュ自動パージ  
 
-Cloudflare’s plugin for WordPress automatically refreshes the Cloudflare cache of each post/page/custom post type when you update the content.
+ページや投稿、カスタム投稿タイプを更新すると、CloudflareのWordPressプラグインが自動的にキャッシュを更新します。  
 
-### Additional Features
+### その他の機能  
 
-- Header rewrites to prevent a redirect loop when Cloudflare’s Universal SSL is enabled.
-- Change Cloudflare settings from within the plugin without needing to navigate to the Cloudflare.com dashboard. You can change settings for cache purge, security level, Always Online™, and image optimization.
-- View analytics such as total visitors, bandwidth saved, and threats blocked.
-- Support for HTTP2/Server Push.
+- Universal SSLが有効な場合のリダイレクトループを防ぐためのヘッダーリライト。  
+- Cloudflare.comダッシュボードにアクセスせずに、プラグイン内からCloudflareの設定を変更可能（キャッシュパージ、セキュリティレベル、Always Online™、画像最適化など）。  
+- 訪問者数、節約された帯域幅、ブロックされた脅威などのアナリティクスを表示。  
+- HTTP/2およびサーバープッシュのサポート。  
 
-## Installation
+## インストール  
 
-1. To install the Cloudflare plugin into your WordPress admin panel, please visit: <https://wordpress.org/plugins/cloudflare/> and click “Download” or download the plugin from this GitHub repo.
-    - To install the plugin after downloading it via GitHub, navigate to Plugins → Add New → Upload Plugin and upload the Cloudflare-WordPress-master.zip file.
-2. Once you’ve installed the plugin, activate it through the WordPress plugin panel.
-3. If you're upgrading from the old plugin, and had previously inputted your API Key, you'll be automatically logged-in after updating the plugin.
-4. If this is the first time installing Cloudflare's WordPress plugin, please navigate to the plugin settings inside of your WordPress admin panel after activating, and input your Cloudflare username and API key; to find your API key, follow these instructions. If you do not already have a Cloudflare account, you’ll see the option to create one.
-5. After successfully logging into the plugin, click the “Apply Default Settings” button within the plugin’s dashboard. Clicking “Apply” will enable specific Cloudflare settings, optimized for the WordPress platform. These settings can be found here.
-6. Once this setting has been applied, that’s it! Your website is now on the Cloudflare network and optimized for the WordPress platform. You’ll also begin to see improved website load speeds, bandwidth savings, and protection against hackers, spammers, and bots.
+1. CloudflareプラグインをWordPress管理画面からインストールします。以下のURLから「ダウンロード」をクリックするか、GitHubリポジトリからプラグインをダウンロードしてください：<https://wordpress.org/plugins/cloudflare/>  
+    - GitHubからダウンロードした場合、「プラグイン」→「新規追加」→「プラグインのアップロード」でCloudflare-WordPress-master.zipファイルをアップロードします。  
+2. プラグインをインストール後、WordPressプラグイン管理画面で有効化します。  
+3. 旧プラグインからアップグレードする場合、以前に入力したAPIキーがある場合、自動的にログインされます。  
+4. 初めてプラグインをインストールする場合、有効化後に設定画面でCloudflareのユーザー名とAPIキーを入力してください。APIキーの取得方法は[こちら](https://support.cloudflare.com/)をご覧ください。アカウントをお持ちでない場合、作成オプションが表示されます。  
+5. プラグインにログイン後、「デフォルト設定を適用」ボタンをクリックしてください。この操作により、WordPressに最適化された特定のCloudflare設定が有効になります。設定の詳細は[こちら](https://support.cloudflare.com/hc/en-us/articles/227342487)をご覧ください。  
+6. これで設定完了です！Cloudflareネットワーク上でウェブサイトが最適化されました。ウェブサイトの読み込み速度向上、帯域幅の節約、ハッカーやスパマー、ボットからの保護が期待できます。  
 
-## FAQ
+## FAQ  
 
-### Do I need a Cloudflare account to use the plugin?
+### プラグインを使用するにはCloudflareアカウントが必要ですか？  
 
-Yes, on install and activation the plugin, first time users will be asked to enter their email address (used to sign-up for an account at cloudflare.com) and their user API key. This is needed to support all the features offered by the plugin.
+はい。プラグインをインストールおよび有効化する際、初回ユーザーはメールアドレス（Cloudflareアカウント作成用）とAPIキーを入力する必要があります。この情報はプラグインのすべての機能を利用するために必要です。  
 
-### What settings are applied when I click "Apply Default Settings" in Cloudflare's WordPress plugin?
+### 「デフォルト設定を適用」をクリックすると、どの設定が適用されますか？  
 
- You can review the recommended settings that are applied, here: <https://support.cloudflare.com/hc/en-us/articles/227342487>
+適用される推奨設定の詳細は[こちら](https://support.cloudflare.com/hc/en-us/articles/227342487)をご覧ください。  
 
-### Does the plugin work if I have Varnish enabled?
+### Varnishが有効でもプラグインは動作しますか？  
 
-Yes, Cloudflare works with, and helps speed up your site even more, if you have Varnish enabled.
+はい。Varnishを有効にしている場合でも、Cloudflareはさらにサイトの高速化をサポートします。  
 
-## Support
+## サポート  
 
-### Visit Our Knowledge Base
+### ナレッジベースをご覧ください  
 
-Before submitting a support ticket, check out our knowledge base to see if your question has already been answered: <https://support.cloudflare.com/hc/en-us/sections/200820268-Content-Management-System-CMS->
+サポートチケットを送信する前に、ナレッジベースをご確認ください：<https://support.cloudflare.com/hc/en-us/sections/200820268-Content-Management-System-CMS->  
 
-### File a Support Ticket
+### サポートチケットを送信  
 
-For all support inquiries regarding Cloudflare’s WordPress plugin, please login to your Cloudflare account, file a support ticket, include any screenshots or details: <https://support.cloudflare.com/hc/en-us/requests/new>
+CloudflareのWordPressプラグインに関するお問い合わせは、Cloudflareアカウントにログインし、サポートチケットを送信してください。スクリーンショットや詳細を添付してください：<https://support.cloudflare.com/hc/en-us/requests/new>  
 
-## Contributions
+## コントリビューション  
 
-We welcome community contribution to this repository. [CONTRIBUTING.md](CONTRIBUTING.md) will help you start contributing. You can find active problems to work on in [Issues](https://github.com/cloudflare/Cloudflare-WordPress/issues) page.
+このリポジトリへのコミュニティ貢献を歓迎します。[CONTRIBUTING.md](CONTRIBUTING.md)を参照して開始してください。[Issues](https://github.com/cloudflare/Cloudflare-WordPress/issues)ページで解決する課題を見つけることができます。  
 
-## Changelog
+## 変更履歴  
 
-See [changelog](https://wordpress.org/plugins/cloudflare/changelog/)
+変更履歴は[こちら](https://wordpress.org/plugins/cloudflare/changelog/)をご覧ください。  
